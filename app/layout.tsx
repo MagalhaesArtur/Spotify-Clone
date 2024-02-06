@@ -26,7 +26,7 @@ export default function RootLayout({
           <ToasterProvider />
           <UserProvider>
             <ModalProvider />
-            <Sidebar>{children}</Sidebar>{" "}
+            <Sidebar>{children}</Sidebar>
           </UserProvider>
         </SupabaseProvider>
       </body>
