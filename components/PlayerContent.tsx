@@ -18,9 +18,8 @@ interface PlayerContentProps {
 }
 
 const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
-  const [volume, setVolume] = useState(0);
+  const [volume, setVolume] = useState(0.5);
   const [isPlaying, setIsPlaying] = useState(false);
-
   const player = usePlayer();
   const Icon = isPlaying ? BsPauseFill : BsPlayFill;
   const VolumeIcon = volume === 0 ? HiSpeakerXMark : HiSpeakerWave;
@@ -104,7 +103,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
       items-center"
       >
         <div
-          onClick={() => {}}
+          onClick={handlePlay}
           className="h-10
       w-10 flex items-center justify-center rounded-full
       bg-white
@@ -131,13 +130,25 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
           className="text-neutral-400 cursor-pointer hover:text-white transition"
         />
         <div
-          onClick={onPlayNext}
+          onClick={() => {
+            if (!isPlaying) {
+              play();
+              setIsPlaying(true);
+            } else {
+              pause();
+              setIsPlaying(false);
+            }
+          }}
           className="
         flex items-center justify-center h-10 w-10 rounded-full bg-white
         p-1 cursor-pointer
         "
         >
-          <Icon size={30} className="text-black" />
+          {isPlaying ? (
+            <BsPauseFill size={30} className="text-black" />
+          ) : (
+            <BsPlayFill size={30} className="text-black" />
+          )}
         </div>
         <AiFillStepForward
           size={30}

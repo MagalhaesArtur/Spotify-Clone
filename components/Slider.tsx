@@ -7,7 +7,7 @@ interface SliderProps {
   onChange?: (value: number) => void;
 }
 
-const Slider: React.FC<SliderProps> = ({ value = 1, onChange }) => {
+const Slider: React.FC<SliderProps> = ({ value = 0.5, onChange }) => {
   const handleChange = (newValue: number[]) => {
     onChange?.(newValue[0]);
   };
@@ -33,7 +33,7 @@ const Slider: React.FC<SliderProps> = ({ value = 1, onChange }) => {
       h-[3px]
       "
       >
-        <RadixSlider.Range className="absolute bg-white rounded-full w-full" />
+        <RadixSlider.Range className="absolute h-full  bg-white rounded-full " />
       </RadixSlider.Track>
     </RadixSlider.Root>
   );
