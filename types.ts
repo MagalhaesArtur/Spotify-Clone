@@ -40,15 +40,15 @@ export interface Subscription {
 
 export interface Price {
   id: string;
-  productId?: string;
+  product_id?: string;
   active?: boolean;
   description?: string;
-  unitAmount?: number;
+  unit_amount?: number;
   currency?: string;
   type?: Stripe.Price.Type;
   interval?: Stripe.Price.Recurring.Interval;
-  intervalCount?: number;
-  trialPeriodDays?: number | null;
+  interval_count?: number;
+  trial_period_days?: number | null;
   metadata?: Stripe.Metadata;
   products?: Product;
 }
