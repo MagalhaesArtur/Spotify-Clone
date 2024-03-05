@@ -65,7 +65,7 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
         <p className="font-semibold truncate w-full">{data.title}</p>
         <p
           className="text-neutral-400
-        text-sm pb-4 w-full truncate"
+        text-sm pb-4 w-full truncate "
         >
           By {data.author}
         </p>
@@ -73,13 +73,13 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
       <div
         className="
       absolute
-      bottom-24
+      bottom-28
       right-5
       "
       >
         <PlayButton />
       </div>
-      <TrashIcon />
+      <TrashIcon id={data.id} />
     </div>
   );
 };
