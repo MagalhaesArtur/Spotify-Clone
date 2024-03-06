@@ -22,7 +22,7 @@ const DeleteModal = () => {
       router.refresh();
       toast.success("Song deleted!");
       deleteModal.onClose();
-      setIsLoading(true);
+      setIsLoading(false);
     }, 2000);
   };
 
