@@ -9,6 +9,7 @@ import ToasterProvider from "@/providers/ToasterProvider";
 import getSongsByUserID from "@/actions/getSongsByUserID";
 import Player from "@/components/Player";
 import getActiveProductsWithPrices from "@/actions/getActiveProductsWithPrices";
+import { AppWrapper } from "@/context";
 
 const font = Figtree({ subsets: ["latin"] });
 
@@ -33,14 +34,16 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <SupabaseProvider>
-          <ToasterProvider />
-          <UserProvider>
-            <ModalProvider products={products} />
-            <Sidebar songs={userSongs}>{children}</Sidebar>
-            <Player />
-          </UserProvider>
-        </SupabaseProvider>
+        <AppWrapper>
+          <SupabaseProvider>
+            <ToasterProvider />
+            <UserProvider>
+              <ModalProvider products={products} />
+              <Sidebar songs={userSongs}>{children}</Sidebar>
+              <Player />
+            </UserProvider>
+          </SupabaseProvider>
+        </AppWrapper>
       </body>
     </html>
   );
