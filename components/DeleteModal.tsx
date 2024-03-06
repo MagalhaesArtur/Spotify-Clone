@@ -11,15 +11,15 @@ import Loading from "./loading";
 const DeleteModal = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { deleteSongId } = useAppContext();
-
   const deleteModal = useDeleteModal();
   const router = useRouter();
 
   const deleteSong = async (id: string) => {
     setIsLoading(true);
     await supabaseAdmin.from("songs").delete().eq("id", id);
+    router.refresh();
+
     setTimeout(() => {
-      router.refresh();
       toast.success("Song deleted!");
       deleteModal.onClose();
       setIsLoading(false);
