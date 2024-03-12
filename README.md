@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" > Spotify Clone </h1>
 
-## Getting Started
+<hr/>
 
-First, run the development server:
+Um projeto para desenvolvimento pessoal.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse a aplicação em funcionamento!
+Link: [https://spotify-clone-tutu.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Fotos da aplicação:
 
-## Learn More
+<div>
+    <h3>Login Page:</h3>
+    <img src="https://img001.prntscr.com/file/img001/GqUlGD3xQdKp0yEWiecsWA.png" width="99%" alt="">
+    <h3>Mobile:</h3>
+    <div style="display: flex; margin-top: 5px;" width="99%">
+        <img src="https://img001.prntscr.com/file/img001/_AeeosQzRySV5CU71U8gVA.png"   alt="">
+      <hr/>
+        <img src="https://img001.prntscr.com/file/img001/ONJFwngUT3ut89VfhOplUg.png"  alt="">
+    </div>
+    <hr/>
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+## Tecnologias Utilizadas:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✔️ NextJS
+✔️ Typescript
+✔️ Supabase
+✔️ Stripe
+✔️ TailwindCSS
+✔️ MaterialUI
+✔️ phosphor-react
+✔️ RadixUI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<hr>
+<p>Made with 💜 by João Artur 👋 See my <a href="https://www.linkedin.com/in/magalhesartur/">Linkedin</a></p>
