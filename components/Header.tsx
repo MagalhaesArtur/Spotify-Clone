@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { HiHome } from "react-icons/hi";
@@ -11,6 +11,7 @@ import { useUser } from "@/hooks/useUser";
 import { FaUserAlt } from "react-icons/fa";
 import toast from "react-hot-toast";
 import usePlayer from "@/hooks/usePlayer";
+import Link from "next/link";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -95,7 +96,9 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           transition
           "
           >
-            <HiHome className=" text-black" size={20} />
+            <Link className="w-full h-full" href={"/"}>
+              <HiHome className=" text-black" size={20} />
+            </Link>
           </button>
           <button
             className="
@@ -108,7 +111,9 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           transition
           "
           >
-            <BiSearch className=" text-black" size={20} />
+            <Link className="w-full h-full" href={"/search"}>
+              <BiSearch className=" text-black" size={20} />
+            </Link>
           </button>
         </div>
         <div
